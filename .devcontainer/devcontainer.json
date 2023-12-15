@@ -1,0 +1,14 @@
+{
+	"name": "PHP 8",
+	"image": "php:8.0-apache",
+
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {},
+		"ghcr.io/devcontainers/features/php:1": {}
+	},
+
+	"postCreateCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && composer require laravel/laravel guzzlehttp/guzzle symfony/var-dumper"
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
